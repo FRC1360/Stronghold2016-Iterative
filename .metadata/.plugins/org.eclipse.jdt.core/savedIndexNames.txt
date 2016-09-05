@@ -12,7 +12,6 @@ INDEX VERSION 1.127+C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iter
 3234117647.index
 3566541198.index
 2324149168.index
-365443200.index
 3897901669.index
 3509523518.index
 1656417267.index
