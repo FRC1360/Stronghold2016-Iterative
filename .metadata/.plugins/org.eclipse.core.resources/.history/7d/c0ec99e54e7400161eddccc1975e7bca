@@ -29,12 +29,12 @@ public class HumanInput {
 	}
 	
 	//Driver
-	public double getDriverBackward()
+	public double getDriverForward()
 	{
 		return this.driver.getLeftTrigger();
 	}
 	
-	public double getDriverForward()
+	public double getDriverBackward()
 	{
 		return this.driver.getRightTrigger();
 	}

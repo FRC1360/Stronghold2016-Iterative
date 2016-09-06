@@ -31,7 +31,7 @@ public class HumanInput {
 	//Driver
 	public double getDriverBackward()
 	{
-		return this.driver.getLeftTrigger();
+		return -this.driver.getLeftTrigger();
 	}
 	
 	public double getDriverForward()
