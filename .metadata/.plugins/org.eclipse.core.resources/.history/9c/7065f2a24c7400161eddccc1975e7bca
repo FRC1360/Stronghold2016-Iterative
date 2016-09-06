@@ -11,7 +11,6 @@ public class RobotOutput {
 	private Victor driveLeftBack;
 	private Victor driveRightFront;
 	private Victor driveRightBack;
-	private Victor intakeMotor;
 	
 	//Initialize the motors and stuff
 	private RobotOutput()
@@ -20,7 +19,6 @@ public class RobotOutput {
 		driveLeftBack = new Victor(1);
 		driveRightFront = new Victor(2);
 		driveRightBack = new Victor(3);
-		intakeMotor = new Victor(4);
 	}
 	
 	//Still dont know what this is used for
@@ -60,17 +58,11 @@ public class RobotOutput {
 		tankDrive(left, right);
 	}
 	
-	public void intake(double speed)
-	{
-		intakeMotor.set(speed);
-	}
-	
 	public void stopAll()
 	{
 		driveLeftFront.set(0);
 		driveLeftBack.set(0);
 		driveRightFront.set(0);
 		driveRightBack.set(0);
-		intakeMotor.set(0);
 	}
 }
