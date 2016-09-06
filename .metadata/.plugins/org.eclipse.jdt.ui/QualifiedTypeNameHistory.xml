@@ -2,4 +2,8 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.util.XboxRemote"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Victor"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.teleop.TeleopControl"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.IO.RobotOutput"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.IO.HumanInput"/>
 </qualifiedTypeNameHistroy>
