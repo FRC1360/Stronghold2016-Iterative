@@ -34,7 +34,7 @@ public class TeleopIntake implements TeleopComponent {
 	@Override
 	public void disable() {
 		// TODO Auto-generated method stub
-
+		this.robotOutput.intake(0);
 	}
 
 }

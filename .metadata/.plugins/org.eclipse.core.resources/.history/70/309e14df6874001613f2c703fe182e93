@@ -34,7 +34,7 @@ public class TeleopPivot implements TeleopComponent {
 	@Override
 	public void disable() {
 		// TODO Auto-generated method stub
-		this.robotOutput.pivot(0);
+
 	}
 
 }
