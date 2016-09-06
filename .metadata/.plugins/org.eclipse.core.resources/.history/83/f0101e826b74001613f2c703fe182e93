@@ -34,7 +34,6 @@ public class TeleopDrive implements TeleopComponent {
 		if(Math.abs(turn) < 0.1) turn = 0;
 		
 		this.robotOutput.arcadeDrive(turn, speed);
-		this.robotOutput.actuateDriveTrain(this.humanInput.getDriverActuate());
 	}
 	
 	public void disable()

@@ -1,6 +1,5 @@
 package org.usfirst.frc.team1360.robot.IO;
 
-import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Victor;
 
 public class RobotOutput {
@@ -14,7 +13,6 @@ public class RobotOutput {
 	private Victor driveRightBack;
 	private Victor intakeMotor;
 	private Victor pivotMotor;
-	private Solenoid driveSolenoid;
 	
 	//Initialize the motors and stuff
 	private RobotOutput()
@@ -25,9 +23,6 @@ public class RobotOutput {
 		driveRightBack = new Victor(3);
 		intakeMotor = new Victor(4);
 		pivotMotor = new Victor(5);
-		
-		driveSolenoid = new Solenoid(0);
-		
 	}
 	
 	//Still dont know what this is used for
@@ -65,11 +60,6 @@ public class RobotOutput {
 		double right = (-turn) + speed;
 		
 		tankDrive(left, right);
-	}
-	
-	public void actuateDriveTrain(boolean input)
-	{
-		driveSolenoid.set(input);
 	}
 	
 	public void intake(double speed)
