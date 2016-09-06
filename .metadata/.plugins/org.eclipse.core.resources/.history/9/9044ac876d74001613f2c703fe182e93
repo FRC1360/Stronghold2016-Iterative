@@ -8,8 +8,8 @@ public class DriveForward extends AutonCommand {
 
 	private RobotOutput robotOutput;
 	
-	public DriveForward(long timeout) {
-		super(RobotSubsystems.DRIVE, timeout);
+	public DriveForward(RobotSubsystems type) {
+		super(RobotSubsystems.DRIVE);
 		
 		this.robotOutput = RobotOutput.getInstance();
 	}
