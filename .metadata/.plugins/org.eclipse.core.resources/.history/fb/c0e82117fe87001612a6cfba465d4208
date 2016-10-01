@@ -2,6 +2,14 @@ package org.usfirst.frc.team1360.robot.util.pid;
 
 public class PIDSpeedController {
 	
+	private double p;
+	private double i;
+	private double d;
+	private double error;
+	private double input;
+	private double output;
+	private double setpoint;
+	
 	private double dP;
 	private double dI;
 	private double dD;
@@ -34,15 +42,8 @@ public class PIDSpeedController {
 
 	public void SetD(double constantD) { this.dD = constantD; }
 	public double GetD() { return dD; }
-	
-	public void SetInput(double input) { this.dInput = input; }
-	public double GetInput() { return dInput; }
-	
-	public double GetOutput() { return dOutput; }
-	
-	public void SetSetpoint(double setpoint) { this.dSetpoint = setpoint; }
-	public double GetSetpoint() { return dSetpoint; }
-	
+
 	public double GetError() { return dError; }
+	
 }
  
