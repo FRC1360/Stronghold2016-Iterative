@@ -1,0 +1,24 @@
+package org.usfirst.frc.team1360.robot.IO;
+
+public class SensorInput {
+	private static SensorInput instance;
+	private RobotOutput robotOutput;
+	
+	private SensorInput()
+	{
+		this.robotOutput = RobotOutput.getInstance();
+	}
+	
+	public SensorInput getInstance()
+	{
+		if(instance == null)
+		{
+			SensorInput.instance = instance;
+		}
+		
+		return instance;
+	}
+	
+	
+	
+}
