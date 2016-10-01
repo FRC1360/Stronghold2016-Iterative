@@ -2,7 +2,6 @@ package org.usfirst.frc.team1360.robot.teleop;
 
 import org.usfirst.frc.team1360.robot.IO.HumanInput;
 import org.usfirst.frc.team1360.robot.IO.RobotOutput;
-import org.usfirst.frc.team1360.robot.util.pid.PIDSpeedController;
 
 public class TeleopDrive implements TeleopComponent {
 	
@@ -27,7 +26,7 @@ public class TeleopDrive implements TeleopComponent {
 	}
 	
 	public void calculate()
-	{		
+	{
 		double speed = this.humanInput.getDriverForward() - this.humanInput.getDriverBackward();
 		double turn = this.humanInput.getDriverTurn();
 		

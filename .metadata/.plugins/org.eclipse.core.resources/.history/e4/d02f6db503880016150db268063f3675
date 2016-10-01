@@ -1,8 +1,5 @@
 package org.usfirst.frc.team1360.robot.IO;
 
-import org.usfirst.frc.team1360.robot.Robot;
-import org.usfirst.frc.team1360.robot.util.pid.PIDSpeedController;
-
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Victor;
 
@@ -66,15 +63,6 @@ public class RobotOutput {
 	{
 		double left = (-turn) - speed;
 		double right = (-turn) + speed;
-		
-		Robot.PIDSpeedControllerDriveLeft.SetSetpoint(left);
-		Robot.PIDSpeedControllerDriveRight.SetSetpoint(right);
-		
-		Robot.PIDSpeedControllerDriveLeft.CalculateError();
-		Robot.PIDSpeedControllerDriveRight.CalculateError();
-		
-		left = Robot.PIDSpeedControllerDriveLeft.GetOutput();
-		right = Robot.PIDSpeedControllerDriveRight.GetOutput()
 		
 		tankDrive(left, right);
 	}
