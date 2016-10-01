@@ -1,5 +1,8 @@
 package org.usfirst.frc.team1360.robot.util.pid;
 
+import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.PIDSourceType;
+
 public class PIDSpeedController {
 	
 	private double dP;
@@ -68,8 +71,6 @@ public class PIDSpeedController {
 		
 		dError = dPError;
 		lPreviousTime = lCurrentTime;
-		
-		encoder.
 	}
 }
  
