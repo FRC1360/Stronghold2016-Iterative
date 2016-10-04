@@ -69,6 +69,7 @@ public class PIDSpeedController {
 		dError = dPError;
 		lPreviousTime = lCurrentTime;
 		
+		encoder.
 	}
 }
  

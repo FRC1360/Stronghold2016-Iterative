@@ -6,4 +6,5 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.teleop.TeleopControl"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.IO.RobotOutput"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.IO.HumanInput"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Encoder"/>
 </qualifiedTypeNameHistroy>
