@@ -5,7 +5,7 @@ public class PIDSpeedController {
 	private double P;
 	private double I;
 	private double D;
-	private double errorEps;
+	private double errorEps
 
 	private double Error;
 	
