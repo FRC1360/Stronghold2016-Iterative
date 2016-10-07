@@ -35,15 +35,15 @@ public class TeleopShoot implements TeleopComponent{
 
 		if(humanInput.getOperatorIntakeHeight())
 		{
-			this.robotOutput.setShooter(LSpeed, RSpeed);
+			this.robotOutput.setShooter(0, 0);
 		} 
 		else if (humanInput.getOperatorBatterShot())
 		{
-			this.robotOutput.setShooter(LSpeed, RSpeed);
+			this.robotOutput.setShooter(0, 0);
 		} 
 		else if (humanInput.getOperatorOuterworksShot())
 		{
-			this.robotOutput.setShooter(LSpeed, RSpeed);
+			this.robotOutput.setShooter(0, 0);
 		}
 		
 	}
