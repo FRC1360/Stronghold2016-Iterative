@@ -24,6 +24,9 @@ public class Robot extends IterativeRobot {
     private RobotOutput robotOutput;
     private HumanInput humanInput;
     private TeleopControl teleopControl;
+    
+    public static PIDSpeedController PIDSpeedControllerDriveLeft;
+    public static PIDSpeedController PIDSpeedControllerDriveRight;
 	
     /**
      * This function is run when the robot is first started up and should be

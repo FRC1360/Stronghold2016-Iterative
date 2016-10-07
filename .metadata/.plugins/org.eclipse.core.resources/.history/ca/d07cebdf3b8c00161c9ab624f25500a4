@@ -55,19 +55,19 @@ public class PIDSpeedController {
 	public void CalculateError()
 	{
 		// Source: http://brettbeauregard.com/blog/2011/04/improving-the-beginners-pid-introduction/
-		long CurrentTime = System.currentTimeMillis();
-		double TimeSinceLastCalculate = (double)(CurrentTime - PreviousTime);
+		long lCurrentTime = System.currentTimeMillis();
+		double dTimeSinceLastCalculate = (double)(lCurrentTime - PreviousTime);
 		
 		// Compute the error components for the P, I, and D terms.
 		PError = Setpoint - Input;
-		IError = IError + (PError * TimeSinceLastCalculate);
-		DError = (PError - Error) / TimeSinceLastCalculate;
+		IError = IError + (PError * dTimeSinceLastCalculate);
+		DError = (PError - Error) / dTimeSinceLastCalculate;
 		
 		// Compute the output.
 		Output = P * PError + I * IError + D * DError;
 		
 		Error = PError;
-		PreviousTime = CurrentTime;
+		PreviousTime = lCurrentTime;
 		
 	}
 }

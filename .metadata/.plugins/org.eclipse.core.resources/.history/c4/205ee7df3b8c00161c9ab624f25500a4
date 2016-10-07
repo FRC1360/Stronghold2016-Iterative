@@ -67,6 +67,15 @@ public class RobotOutput {
 		double left = (-turn) - speed;
 		double right = (-turn) + speed;
 		
+		Robot.PIDSpeedControllerDriveLeft.SetSetpoint(left);
+		Robot.PIDSpeedControllerDriveRight.SetSetpoint(right);
+		
+		Robot.PIDSpeedControllerDriveLeft.CalculateError();
+		Robot.PIDSpeedControllerDriveRight.CalculateError();
+		
+		left = Robot.PIDSpeedControllerDriveLeft.GetOutput();
+		right = Robot.PIDSpeedControllerDriveRight.GetOutput();
+		
 		tankDrive(left, right);
 	}
 	
