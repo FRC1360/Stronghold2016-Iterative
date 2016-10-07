@@ -65,7 +65,7 @@ public class PIDSpeedController {
 		
 		if((Math.abs(PError)< this.errorEps))
 		{
-			IError = IError * 1;
+			IError = IError;
 		}
 		else
 		{
