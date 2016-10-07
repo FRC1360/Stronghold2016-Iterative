@@ -26,21 +26,14 @@ public class TeleopShoot implements TeleopComponent{
 	
 	@Override
 	public void calculate() {
+		// TODO Auto-generated method stub
 		
-		double LSpeed = this.humanInput.getOperatorInatke() - this.humanInput.getOperatorOutake();
-		double RSpeed = this.humanInput.getOperatorInatke() - this.humanInput.getOperatorOutake();
-		
-		if(Math.abs(LSpeed) < 0.3) LSpeed = 0;
-		if(Math.abs(RSpeed) < 0.3) RSpeed = 0;
-
-		
-		this.robotOutput.setShooter(0, 0);
 	}
 
 	@Override
 	public void disable() {
 		// TODO Auto-generated method stub
-		this.robotOutput.setShooter(0, 0);
+		
 	}
 
 }

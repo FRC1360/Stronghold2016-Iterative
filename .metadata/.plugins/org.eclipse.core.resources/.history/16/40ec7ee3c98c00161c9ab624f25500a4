@@ -82,10 +82,10 @@ public class RobotOutput {
 		intakeMotor1.set(speed);
 	}
 	
-	public void setShooter(double lSpeed, double rSpeed)
+	public void setShooter(double speed)
 	{
-		intakeMotor1.set(-lSpeed);
-		intakeMotor2.set(rSpeed);
+		intakeMotor1.set(speed);
+		intakeMotor2.set(speed);
 	}
 	
 	public void pivot(double speed)

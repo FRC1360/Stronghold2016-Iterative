@@ -70,20 +70,4 @@ public class HumanInput {
 		return this.operator.getLeftYAxis();
 	}
 	
-	//Operator Buttons for Shooting
-	public boolean getOperatorIntakeHeight()
-	{
-		return this.operator.getButtonA();
-	}
-	
-	public boolean getOperatorOuterworksShot()
-	{
-		return this.operator.getButtonB();
-	}
-	
-	public boolean getOperatorBatterShot()
-	{
-		return this.operator.getButtonX();
-	}
-	
 }
