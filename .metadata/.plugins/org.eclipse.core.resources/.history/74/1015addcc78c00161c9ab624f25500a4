@@ -5,7 +5,6 @@ public class PIDSpeedController {
 	private double P;
 	private double I;
 	private double D;
-	private double errorEps
 
 	private double Error;
 	
@@ -20,12 +19,11 @@ public class PIDSpeedController {
 	private double IError;
 	private double DError;
 	
-	public PIDSpeedController(double constantP, double constantI, double constantD, double constantEps)
+	public PIDSpeedController(double constantP, double constantI, double constantD)
 	{
 		this.P = constantP;
 		this.I = constantI;
 		this.D = constantD;
-		this.errorEps = constantEps;
 	}
 
 	public void SetConstants(double constantP, double constantI, double constantD)
@@ -62,15 +60,7 @@ public class PIDSpeedController {
 		
 		// Compute the error components for the P, I, and D terms.
 		PError = Setpoint - Input;
-		
-		if((Math.abs(PError)< this.errorEps))
-		{
-			IError = IError;
-		}
-		else
-		{
-			IError = IError + (PError * TimeSinceLastCalculate);
-		}
+		IError = IError + (PError * TimeSinceLastCalculate);
 		DError = (PError - Error) / TimeSinceLastCalculate;
 		
 		// Compute the output.
