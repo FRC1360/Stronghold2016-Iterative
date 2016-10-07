@@ -2,72 +2,72 @@ package org.usfirst.frc.team1360.robot.util.pid;
 
 public class PIDSpeedController {
 	
-	private double dP;
-	private double dI;
-	private double dD;
+	private double P;
+	private double I;
+	private double D;
 
-	private double dError;
+	private double Error;
 	
-	private double dInput;
-	private double dOutput;
-	private double dSetpoint;
+	private double Input;
+	private double Output;
+	private double Setpoint;
 	
-	private long lPreviousTime;
+	private long PreviousTime;
 
-	private double dErrorSum;
-	private double dPError;
-	private double dIError;
-	private double dDError;
+	private double ErrorSum;
+	private double PError;
+	private double IError;
+	private double DError;
 	
 	public PIDSpeedController(double constantP, double constantI, double constantD)
 	{
-		this.dP = constantP;
-		this.dI = constantI;
-		this.dD = constantD;
+		this.P = constantP;
+		this.I = constantI;
+		this.D = constantD;
 	}
 
 	public void SetConstants(double constantP, double constantI, double constantD)
 	{
-		this.dP = constantP;
-		this.dI = constantI;
-		this.dD = constantD;
+		this.P = constantP;
+		this.I = constantI;
+		this.D = constantD;
 	}
 
-	public void SetP(double constantP) { this.dP = constantP; }
-	public double GetP() { return dP; }
+	public void SetP(double constantP) { this.P = constantP; }
+	public double GetP() { return P; }
 
-	public void SetI(double constantI) { this.dI = constantI; }
-	public double GetI() { return dI; }
+	public void SetI(double constantI) { this.I = constantI; }
+	public double GetI() { return I; }
 
-	public void SetD(double constantD) { this.dD = constantD; }
-	public double GetD() { return dD; }
+	public void SetD(double constantD) { this.D = constantD; }
+	public double GetD() { return D; }
 	
-	public void SetInput(double input) { this.dInput = input; }
-	public double GetInput() { return dInput; }
+	public void SetInput(double input) { this.Input = input; }
+	public double GetInput() { return Input; }
 	
-	public double GetOutput() { return dOutput; }
+	public double GetOutput() { return Output; }
 	
-	public void SetSetpoint(double setpoint) { this.dSetpoint = setpoint; }
-	public double GetSetpoint() { return dSetpoint; }
+	public void SetSetpoint(double setpoint) { this.Setpoint = setpoint; }
+	public double GetSetpoint() { return Setpoint; }
 	
-	public double GetError() { return dError; }
+	public double GetError() { return Error; }
 	
 	public void CalculateError()
 	{
 		// Source: http://brettbeauregard.com/blog/2011/04/improving-the-beginners-pid-introduction/
 		long lCurrentTime = System.currentTimeMillis();
-		double dTimeSinceLastCalculate = (double)(lCurrentTime - lPreviousTime);
+		double dTimeSinceLastCalculate = (double)(lCurrentTime - PreviousTime);
 		
 		// Compute the error components for the P, I, and D terms.
-		dPError = dSetpoint - dInput;
-		dIError = dIError + (dPError * dTimeSinceLastCalculate);
-		dDError = (dPError - dError) / dTimeSinceLastCalculate;
+		PError = Setpoint - Input;
+		IError = IError + (PError * dTimeSinceLastCalculate);
+		DError = (PError - Error) / dTimeSinceLastCalculate;
 		
 		// Compute the output.
-		dOutput = dP * dPError + dI * dIError + dD * dDError;
+		Output = P * PError + I * IError + D * DError;
 		
-		dError = dPError;
-		lPreviousTime = lCurrentTime;
+		Error = PError;
+		PreviousTime = lCurrentTime;
 		
 	}
 }
