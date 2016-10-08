@@ -23,7 +23,7 @@ public class TeleopPivot implements TeleopComponent {
 		this.sensorInput = SensorInput.getInstance();
 		this.pivotController =  new OrbitPID(0.001, 0.1, 0.1, 20);
 		SmartDashboard.putNumber("Pivot P: ", 0.001);
-		SmartDashboard.putNumber("Pivot I: ", 0.1);
+		SmartDashboard.putNumber("Pivot D: ", 0.1);
 		SmartDashboard.putNumber("Pivot D: ", 0.1);
 		SmartDashboard.putNumber("Pivot Eps: ", 20);
 	}
@@ -42,10 +42,10 @@ public class TeleopPivot implements TeleopComponent {
 	public void calculate() {
 		// TODO Auto-generated method stub
 		
-		this.pivotController.SetP(SmartDashboard.getNumber("Pivot P: "));
-		this.pivotController.SetI(SmartDashboard.getNumber("Pivot I: "));
-		this.pivotController.SetD(SmartDashboard.getNumber("Pivot D: "));
-		this.pivotController.SetEps(SmartDashboard.getNumber("Pivot Eps: "));
+		SmartDashboard.getNumber("Pivot P: ");
+		SmartDashboard.getNumber("Pivot I: ");
+		SmartDashboard.getNumber("Pivot D: ");
+		SmartDashboard.getNumber("Pivot Eps: ");
 		
 		double speed = -this.humanInput.getOperatorPivot();
 		this.pivotController.SetInput(this.sensorInput.getPivotEncoder());
