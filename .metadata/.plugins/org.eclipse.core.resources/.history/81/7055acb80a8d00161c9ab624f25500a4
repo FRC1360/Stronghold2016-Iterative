@@ -41,15 +41,15 @@ public class TeleopPivot implements TeleopComponent {
 		}
 		else if (humanInput.getOperatorIntakeHeight())
 		{
-			this.pivotController.SetSetpoint(0);
+
 		} 
 		else if (humanInput.getOperatorBatterShot())
 		{
-			this.pivotController.SetSetpoint(1);
+			
 		}
 		else if (humanInput.getOperatorOuterworksShot())
 		{
-			this.pivotController.SetSetpoint(0.5);
+			
 		} 
 		else
 		{
