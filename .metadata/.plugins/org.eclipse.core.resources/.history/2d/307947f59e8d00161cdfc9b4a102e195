@@ -35,7 +35,6 @@ public class Robot extends IterativeRobot {
     	this.humanInput = HumanInput.getInstance();
     	this.teleopControl = TeleopControl.getInstance();
     	this.sensorInput = SensorInput.getInstance();
-    	//this.sensorInput = new SensorInput();
     	
     }
     
@@ -61,8 +60,8 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        this.sensorInput.calculate();
         this.teleopControl.runCycle();
+        this.sensorInput.calculate();
     }
     
     /**

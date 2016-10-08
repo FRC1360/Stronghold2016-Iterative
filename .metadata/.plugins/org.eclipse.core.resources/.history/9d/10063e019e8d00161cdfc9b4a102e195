@@ -54,7 +54,6 @@ public class TeleopPivot implements TeleopComponent {
 		{
 			robotOutput.pivot(speed * 0.45);
 			this.pivotController.SetSetpoint(-1);
-			this.pivotController.CalculateError();
 		}
 		else if (humanInput.getOperatorIntakeHeight())
 		{
@@ -80,7 +79,6 @@ public class TeleopPivot implements TeleopComponent {
 		{
 			robotOutput.pivot(0);
 			this.pivotController.SetSetpoint(-1);
-			this.pivotController.CalculateError();
 		}
 		
 		

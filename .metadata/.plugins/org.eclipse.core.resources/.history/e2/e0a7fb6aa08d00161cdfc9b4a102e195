@@ -16,7 +16,7 @@ public class SensorInput {
 	private AnalogInput rightSide;
 	
 	// TODO: Change back to private.
-	private SensorInput()
+	public SensorInput()
 	{
 		this.robotOutput = RobotOutput.getInstance();
 		this.pivotEncoder = new Encoder(2, 3);
@@ -30,7 +30,7 @@ public class SensorInput {
 	{
 		if(instance == null)
 		{
-			SensorInput.instance = new SensorInput();
+			SensorInput.instance = instance;
 		}
 		
 		return instance;
