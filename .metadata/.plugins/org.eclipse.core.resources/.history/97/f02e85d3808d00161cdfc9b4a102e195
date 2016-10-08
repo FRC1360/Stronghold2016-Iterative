@@ -2,7 +2,6 @@ package org.usfirst.frc.team1360.robot.teleop;
 
 import org.usfirst.frc.team1360.robot.IO.HumanInput;
 import org.usfirst.frc.team1360.robot.IO.RobotOutput;
-import org.usfirst.frc.team1360.robot.IO.SensorInput;
 import org.usfirst.frc.team1360.robot.util.OrbitBangBang;
 
 public class TeleopShoot implements TeleopComponent{
@@ -10,7 +9,6 @@ public class TeleopShoot implements TeleopComponent{
 	private static TeleopShoot instance;
 	private RobotOutput robotOutput;
 	private HumanInput humanInput;
-	private SensorInput sensorInput;
 	
 	private OrbitBangBang LSide;
 	private OrbitBangBang RSide;
@@ -19,9 +17,8 @@ public class TeleopShoot implements TeleopComponent{
 	{
 		this.robotOutput = robotOutput.getInstance();
 		this.humanInput = humanInput.getInstance();	
-		this.sensorInput = sensorInput.getInstance();
-		this.LSide = new OrbitBangBang(1, 0);
-		this.RSide = new OrbitBangBang(1, 0);
+		this.LSide = new OrbitBangBang(1, 1);
+		this.RSide = new OrbitBangBang(1, 1);
 	}
 	
 	public static TeleopShoot getInstance()
@@ -52,13 +49,7 @@ public class TeleopShoot implements TeleopComponent{
 		} 
 		else if (humanInput.getOperatorBatterShot())
 		{
-			//this.robotOutput.setShooter(0.5, 0.5);
-			this.LSide.setTarget(2000);
-			this.LSide.setHighLow(1, 0);
-			this.RSide.setTarget(2000);
-			this.RSide.setHighLow(1, 0);
-			
-			this.robotOutput.setShooter(LSide.calculate(this.sensorInput.getLeftSpeed()), LSide.calculate(this.sensorInput.getRightSpeed()));
+			this.robotOutput.setShooter(0.5, 0.5);
 		} 
 		else if (humanInput.getOperatorOuterworksShot())
 		{
