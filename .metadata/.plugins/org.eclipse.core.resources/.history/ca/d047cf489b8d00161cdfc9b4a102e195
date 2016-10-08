@@ -60,7 +60,6 @@ public class OrbitPID {
 		if(this.Setpoint != this.previousSetpoint)
 		{
 			this.previousSetpoint = this.Setpoint;
-			IError = 0;
 		}
 	}
 	public double GetSetpoint() { return Setpoint; }
@@ -78,7 +77,7 @@ public class OrbitPID {
 		
 		if((Math.abs(PError)< this.errorEps))
 		{
-			IError = IError * 1;
+			IError = 0;
 		}
 		else
 		{

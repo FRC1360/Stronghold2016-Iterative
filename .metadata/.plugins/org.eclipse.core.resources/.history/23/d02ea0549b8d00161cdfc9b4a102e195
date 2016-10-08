@@ -78,7 +78,7 @@ public class OrbitPID {
 		
 		if((Math.abs(PError)< this.errorEps))
 		{
-			IError = IError * 1;
+			IError = 0;
 		}
 		else
 		{
