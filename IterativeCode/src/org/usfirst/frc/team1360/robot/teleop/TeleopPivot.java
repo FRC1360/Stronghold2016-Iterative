@@ -5,6 +5,8 @@ import org.usfirst.frc.team1360.robot.IO.RobotOutput;
 import org.usfirst.frc.team1360.robot.IO.SensorInput;
 import org.usfirst.frc.team1360.robot.util.pid.OrbitPID;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 public class TeleopPivot implements TeleopComponent {
 
 	private static TeleopPivot instance;
@@ -67,6 +69,10 @@ public class TeleopPivot implements TeleopComponent {
 		{
 			robotOutput.pivot(0);
 		}
+		
+		SmartDashboard.putNumber("P = ", this.pivotController.GetP());
+		SmartDashboard.putNumber("I = ", this.pivotController.GetI());
+		SmartDashboard.putNumber("D = ", this.pivotController.GetD());
 	}
 
 	@Override
