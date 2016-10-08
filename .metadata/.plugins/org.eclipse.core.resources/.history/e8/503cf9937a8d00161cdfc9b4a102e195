@@ -14,9 +14,8 @@ public class RobotOutput {
 	private Victor driveLeftBack;
 	private Victor driveRightFront;
 	private Victor driveRightBack;
-	private Victor intakeMotor;
-	private Victor shootMotor1;
-	private Victor shootMotor2;
+	private Victor intakeMotor1;
+	private Victor intakeMotor2;
 	private Victor pivotMotor;
 	private Solenoid driveSolenoid;
 	
@@ -27,10 +26,9 @@ public class RobotOutput {
 		driveLeftBack = new Victor(1);
 		driveRightFront = new Victor(2);
 		driveRightBack = new Victor(3);
-		shootMotor1 = new Victor(4);
-		shootMotor2 = new Victor(5);
+		intakeMotor1 = new Victor(4);
+		intakeMotor2 = new Victor(5);
 		pivotMotor = new Victor(6);
-		intakeMotor = new Victor(7);
 		
 		driveSolenoid = new Solenoid(0);
 		
@@ -80,13 +78,13 @@ public class RobotOutput {
 	
 	public void intake(double speed)
 	{
-		intakeMotor.set(speed);
+		intakeMotor1.set(speed);
 	}
 	
 	public void setShooter(double lSpeed, double rSpeed)
 	{
-		shootMotor1.set(-lSpeed);
-		shootMotor2.set(rSpeed);
+		intakeMotor1.set(-lSpeed);
+		intakeMotor2.set(rSpeed);
 	}
 	
 	public void pivot(double speed)
@@ -100,9 +98,8 @@ public class RobotOutput {
 		driveLeftBack.set(0);
 		driveRightFront.set(0);
 		driveRightBack.set(0);
-		shootMotor1.set(0);
-		shootMotor2.set(0);
+		intakeMotor1.set(0);
+		intakeMotor2.set(0);
 		pivotMotor.set(0);
-		intakeMotor.set(0);
 	}
 }

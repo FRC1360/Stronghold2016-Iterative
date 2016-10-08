@@ -36,7 +36,6 @@ public class SensorInput {
 	{
 		SmartDashboard.putNumber("Pivot Encoder: ", this.getPivotEncoder());
 		SmartDashboard.putNumber("Left Speed", this.getLeftSpeed());
-		SmartDashboard.putNumber("Right Speed", this.getRightSpeed());
 	}
 	
 	public double getPivotEncoder()

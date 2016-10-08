@@ -18,8 +18,6 @@ public class SensorInput {
 		this.pivotEncoder = new Encoder(0, 1);
 		this.rightSide = new AnalogInput(0);
 		this.leftSide = new AnalogInput(1);
-		
-		
 	}
 	
 	public static SensorInput getInstance()
@@ -32,14 +30,7 @@ public class SensorInput {
 		return instance;
 	}
 	
-	public void calculate()
-	{
-		SmartDashboard.putNumber("Pivot Encoder: ", this.getPivotEncoder());
-		SmartDashboard.putNumber("Left Speed", this.getLeftSpeed());
-		SmartDashboard.putNumber("Right Speed", this.getRightSpeed());
-	}
-	
-	public double getPivotEncoder()
+	public double getPivotEnvoder()
 	{
 		return pivotEncoder.get();
 	}

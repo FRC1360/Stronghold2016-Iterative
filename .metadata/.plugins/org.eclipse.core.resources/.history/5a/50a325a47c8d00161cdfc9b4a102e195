@@ -100,9 +100,8 @@ public class RobotOutput {
 		driveLeftBack.set(0);
 		driveRightFront.set(0);
 		driveRightBack.set(0);
-		shootMotor1.set(0);
-		shootMotor2.set(0);
+		intakeMotor1.set(0);
+		intakeMotor2.set(0);
 		pivotMotor.set(0);
-		intakeMotor.set(0);
 	}
 }
