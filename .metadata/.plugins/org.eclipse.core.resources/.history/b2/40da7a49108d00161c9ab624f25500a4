@@ -20,8 +20,6 @@ public class OrbitPID {
 	private double IError;
 	private double DError;
 	
-	private double previousSetpoint;
-	
 	public OrbitPID(double constantP, double constantI, double constantD, double constantEps)
 	{
 		this.P = constantP;
@@ -51,14 +49,7 @@ public class OrbitPID {
 	
 	public double GetOutput() { return Output; }
 	
-	public void SetSetpoint(double setpoint)
-	{ 
-		this.Setpoint = setpoint; 
-		if(this.Setpoint != this.previousSetpoint && this.Error != 0)
-		{
-			this.previousSetpoint = this.Setpoint;
-		}
-	}
+	public void SetSetpoint(double setpoint) { this.Setpoint = setpoint; }
 	public double GetSetpoint() { return Setpoint; }
 	
 	public double GetError() { return Error; }
