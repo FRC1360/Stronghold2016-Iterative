@@ -83,10 +83,7 @@ public class TeleopPivot implements TeleopComponent {
 			this.pivotController.CalculateError();
 		}
 		
-		if(humanInput.getOperatorResetEncoder())
-		{
-			sensorInput.reset();
-		}
+		
 		
 	}
 

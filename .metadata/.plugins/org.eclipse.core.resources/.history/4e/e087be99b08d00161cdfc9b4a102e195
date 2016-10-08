@@ -74,7 +74,6 @@ public class TeleopShoot implements TeleopComponent{
 		else 
 		{
 			this.robotOutput.setShooter(0, 0);
-			this.robotOutput.intake(0);
 		}
 		
 	}

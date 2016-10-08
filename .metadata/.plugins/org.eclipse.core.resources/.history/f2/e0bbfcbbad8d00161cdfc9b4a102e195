@@ -45,11 +45,6 @@ public class Robot extends IterativeRobot {
     	this.teleopControl.disable();
     }
     
-    public void disabledPeriodic()
-    {
-    	this.sensorInput.calculate();
-    }
-    
 
     public void autonomousInit() {
 

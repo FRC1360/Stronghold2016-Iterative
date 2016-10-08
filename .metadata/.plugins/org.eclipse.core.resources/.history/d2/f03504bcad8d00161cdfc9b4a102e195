@@ -86,9 +86,4 @@ public class HumanInput {
 		return this.operator.getButtonX();
 	}
 	
-	public boolean getOperatorResetEncoder()
-	{
-		return this.operator.getButtonY();
-	}
-	
 }
