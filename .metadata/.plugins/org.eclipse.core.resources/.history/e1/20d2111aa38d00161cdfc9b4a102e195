@@ -22,6 +22,7 @@ public class SensorInput {
 		this.pivotEncoder = new Encoder(2, 3);
 		this.rightSide = new AnalogInput(0);
 		this.leftSide = new AnalogInput(1);
+		this.teleopControl = TeleopControl.getInstance();
 		
 	}
 	
