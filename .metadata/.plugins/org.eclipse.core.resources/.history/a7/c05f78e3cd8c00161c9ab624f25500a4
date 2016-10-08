@@ -45,9 +45,6 @@ public class TeleopShoot implements TeleopComponent{
 		else if (humanInput.getOperatorOuterworksShot())
 		{
 			this.robotOutput.setShooter(1, 1);
-		} else 
-		{
-			this.robotOutput.setShooter(0, 0);
 		}
 		
 	}
