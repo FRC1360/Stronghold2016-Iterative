@@ -2,7 +2,6 @@ package org.usfirst.frc.team1360.robot.teleop;
 
 import org.usfirst.frc.team1360.robot.IO.HumanInput;
 import org.usfirst.frc.team1360.robot.IO.RobotOutput;
-import org.usfirst.frc.team1360.robot.util.pid.PIDSpeedController;
 
 public class TeleopPivot implements TeleopComponent {
 
@@ -10,13 +9,10 @@ public class TeleopPivot implements TeleopComponent {
 	private RobotOutput robotOutput;
 	private HumanInput humanInput;
 	
-	private PIDSpeedController pivotController;
-	
 	private TeleopPivot()
 	{
 		this.robotOutput = RobotOutput.getInstance();
 		this.humanInput = HumanInput.getInstance();
-		this.pivotController =  new PIDSpeedController(1, 0.1, 0.1, 5);
 	}
 	
 	public static TeleopPivot getInstance()
