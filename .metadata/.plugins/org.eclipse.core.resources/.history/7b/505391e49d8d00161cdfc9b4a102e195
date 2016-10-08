@@ -27,10 +27,10 @@ public class RobotOutput {
 		driveLeftBack = new Victor(1);
 		driveRightFront = new Victor(2);
 		driveRightBack = new Victor(3);
-		shootMotor1 = new Victor(7);
-		shootMotor2 = new Victor(6);
-		pivotMotor = new Victor(5);
-		intakeMotor = new Victor(4);
+		shootMotor1 = new Victor(4);
+		shootMotor2 = new Victor(5);
+		pivotMotor = new Victor(6);
+		intakeMotor = new Victor(7);
 		
 		driveSolenoid = new Solenoid(0);
 		
