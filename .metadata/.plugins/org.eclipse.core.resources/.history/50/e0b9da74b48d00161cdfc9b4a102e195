@@ -38,19 +38,13 @@ public class SensorInput {
 	public void calculate()
 	{
 		SmartDashboard.putNumber("Pivot Encoder: ", this.getPivotEncoder());
-		SmartDashboard.putNumber("Left Speed: ", this.getLeftSpeed());
-		SmartDashboard.putNumber("Right Speed: ", this.getRightSpeed());
-		SmartDashboard.putNumber("Pivot Degrees: ", this.getPivotEncoderDegrees());
+		SmartDashboard.putNumber("Left Speed", this.getLeftSpeed());
+		SmartDashboard.putNumber("Right Speed", this.getRightSpeed());
 	}
 	
 	public double getPivotEncoder()
 	{
 		return pivotEncoder.get();
-	}
-	
-	public double getPivotEncoderDegrees()
-	{
-		return pivotEncoder.get() / 716.8;
 	}
 	
 	public double getLeftSpeed()

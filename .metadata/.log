@@ -995,3 +995,33 @@ java.net.UnknownHostException: www.codetrails.com
 
 !ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 19:40:29.976
 !MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 20:08:16.073
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 20:08:16.078
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 20:08:54.202
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 20:08:54.210
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 20:16:27.729
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 20:16:27.736
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 20:17:21.906
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 20:17:21.913
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 20:52:19.700
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-08 20:52:19.713
+!MESSAGE Targets: deploy, Mode: run

@@ -47,7 +47,7 @@ public class TeleopPivot implements TeleopComponent {
 		this.pivotController.SetD(SmartDashboard.getNumber("Pivot D: "));
 		this.pivotController.SetEps(SmartDashboard.getNumber("Pivot Eps: "));
 		
-		double speed = this.humanInput.getOperatorPivot();
+		double speed = -this.humanInput.getOperatorPivot();
 		this.pivotController.SetInput(this.sensorInput.getPivotEncoderDegrees());
 		
 		if(Math.abs(speed) > 0.2)

@@ -47,8 +47,8 @@ public class TeleopPivot implements TeleopComponent {
 		this.pivotController.SetD(SmartDashboard.getNumber("Pivot D: "));
 		this.pivotController.SetEps(SmartDashboard.getNumber("Pivot Eps: "));
 		
-		double speed = this.humanInput.getOperatorPivot();
-		this.pivotController.SetInput(this.sensorInput.getPivotEncoderDegrees());
+		double speed = -this.humanInput.getOperatorPivot();
+		this.pivotController.SetInput(this.sensorInput.getPivotEncoder());
 		
 		if(Math.abs(speed) > 0.2)
 		{
@@ -64,14 +64,14 @@ public class TeleopPivot implements TeleopComponent {
 		} 
 		else if (humanInput.getOperatorBatterShot())
 		{
-			this.pivotController.SetSetpoint(45);
+			this.pivotController.SetSetpoint(500);
 			this.pivotController.CalculateError();
 			this.robotOutput.pivot(this.pivotController.GetOutput());
 
 		}
 		else if (humanInput.getOperatorOuterworksShot())
 		{
-			this.pivotController.SetSetpoint(60);
+			this.pivotController.SetSetpoint(250);
 			this.pivotController.CalculateError();
 			this.robotOutput.pivot(this.pivotController.GetOutput());
 
