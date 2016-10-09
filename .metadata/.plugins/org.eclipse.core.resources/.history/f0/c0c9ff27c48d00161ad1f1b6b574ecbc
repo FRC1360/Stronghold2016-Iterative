@@ -80,13 +80,9 @@ public class OrbitPID {
 		{
 			IError = IError * 1;
 		}
-		else if(PError > 0)
-		{
-			IError = IError + Math.min((PError * TimeSinceLastCalculate), 10);
-		}
 		else
 		{
-			IError = IError + Math.max((PError * TimeSinceLastCalculate), -10);
+			IError = IError + (PError * TimeSinceLastCalculate);
 		}
 		DError = (PError - Error) / TimeSinceLastCalculate;
 		

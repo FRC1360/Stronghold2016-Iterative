@@ -21,10 +21,10 @@ public class TeleopPivot implements TeleopComponent {
 		this.robotOutput = RobotOutput.getInstance();
 		this.humanInput = HumanInput.getInstance();
 		this.sensorInput = SensorInput.getInstance();
-		this.pivotController =  new OrbitPID(1, 0.001, 64, 0.5);
+		this.pivotController =  new OrbitPID(1, 64, 0.001, 0.5);
 		SmartDashboard.putNumber("Pivot P: ", 1);
-		SmartDashboard.putNumber("Pivot I: ", 0.001);
-		SmartDashboard.putNumber("Pivot D: ", 64);
+		SmartDashboard.putNumber("Pivot I: ", 64);
+		SmartDashboard.putNumber("Pivot D: ", 0.001);
 		SmartDashboard.putNumber("Pivot Eps: ", 0.5);
 	}
 	
