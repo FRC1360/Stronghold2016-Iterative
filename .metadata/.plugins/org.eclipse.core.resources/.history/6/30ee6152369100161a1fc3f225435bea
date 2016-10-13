@@ -19,7 +19,7 @@ public class SensorInput {
 	private SensorInput()
 	{
 		this.robotOutput = RobotOutput.getInstance();
-		this.pivotEncoder = new Encoder(2, 3);
+		this.pivotEncoder = new Encoder(3, 2);
 		this.rightSide = new AnalogInput(0);
 		this.leftSide = new AnalogInput(1);
 		

@@ -67,7 +67,7 @@ public class HumanInput {
 	
 	public double getOperatorPivot()
 	{
-		return -this.operator.getLeftYAxis();
+		return this.operator.getLeftYAxis();
 	}
 	
 	//Operator Buttons for Shooting

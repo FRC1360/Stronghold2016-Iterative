@@ -91,7 +91,7 @@ public class RobotOutput {
 	
 	public void pivot(double speed)
 	{
-		pivotMotor.set(speed);
+		pivotMotor.set(-speed);
 	}
 	
 	public void stopAll()
