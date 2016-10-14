@@ -50,7 +50,7 @@ public class SensorInput {
 	
 	public double getPivotEncoderDegrees()
 	{
-		return pivotEncoder.get() / 716.8;
+		return 145 + (pivotEncoder.get() / 716.8);
 	}
 	
 	public double getLeftSpeed()
