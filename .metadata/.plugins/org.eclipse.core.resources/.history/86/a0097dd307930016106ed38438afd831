@@ -9,7 +9,8 @@ public class LowBar implements AutonMode {
 	
 	@Override
 	public void addToMode(AutonBuilder ab) {
-	 ab.addCommand(new DriveForward(3000, 1));// sets drive to full speed
+	 ab.addCommand(new DriveForward(1));// sets drive to full speed
 	 ab.addCommand(new AutonWait(5000)); // waits 5 seconds
+	 ab.addCommand(new DriveForward(0));//sets drive to 0 
 	}
 }
