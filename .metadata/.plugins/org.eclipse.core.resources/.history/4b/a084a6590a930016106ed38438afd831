@@ -1,0 +1,33 @@
+package org.usfirst.frc.team1360.robot.auto;
+
+import org.usfirst.frc.team1360.robot.IO.RobotOutput;
+import org.usfirst.frc.team1360.robot.IO.SensorInput;
+
+public class PivotSetOutput extends AutonCommand {
+
+	private SensorInput sensroInput;
+	private RobotOutput robotOutput;
+	
+	private double setpoint;
+	
+	public PivotSetOutput(double setpoint) {
+		super(RobotSubsystems.ARM);
+		
+		this.sensroInput = SensorInput.getInstance();
+		this.robotOutput = RobotOutput.getInstance();
+		
+		this.setpoint = setpoint;
+	}
+
+	@Override
+	public boolean calculate() {
+		return false;
+	}
+
+	@Override
+	public void override() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

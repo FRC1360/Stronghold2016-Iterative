@@ -9,6 +9,9 @@ public class HumanInput {
 	//These two are the Driver and Operator remotes
 	private XboxRemote driver;
 	private XboxRemote operator;
+
+	private boolean autonIncreaseStepWasPressed = false;
+	private boolean autonDecreaseStepWasPressed = false;
 	
 	
 	//Initialize the driver and operator remotes
@@ -67,7 +70,59 @@ public class HumanInput {
 	
 	public double getOperatorPivot()
 	{
-		return this.operator.getLeftYAxis();
+		return -this.operator.getLeftYAxis();
 	}
+	
+	//Operator Buttons for Shooting
+	public boolean getOperatorIntakeHeight()
+	{
+		return this.operator.getButtonA();
+	}
+	
+	public boolean getOperatorOuterworksShot()
+	{
+		return this.operator.getButtonB();
+	}
+	
+	public boolean getOperatorBatterShot()
+	{
+		return this.operator.getButtonX();
+	}
+	
+	public boolean getOperatorResetEncoder()
+	{
+		return this.operator.getButtonY();
+	}
+	
+	//Auto
+    public boolean getAutonSetModeButton() {
+        return this.driver.getButtonA();
+    }
+    
+    public boolean getAutonSetDelayButton() {
+        return this.driver.getButtonB();
+    }
+    
+    public double getAutonSelectStick() {
+        return this.driver.getLeftYAxis();
+    }
+    
+    
+    
+    public boolean getAutonStepIncrease() {
+    	// only returns true on rising edge
+    	boolean result = this.driver.getButtonRB() && !this.autonIncreaseStepWasPressed;
+    	this.autonIncreaseStepWasPressed = this.driver.getButtonRB();
+    	return result;
+    	
+    }
+    
+    public boolean getAutonStepDecrease() {
+    	// only returns true on rising edge
+    	boolean result = this.driver.getButtonLB() && !this.autonDecreaseStepWasPressed;
+    	this.autonDecreaseStepWasPressed = this.driver.getButtonLB();
+    	return result;
+    
+    }
 	
 }

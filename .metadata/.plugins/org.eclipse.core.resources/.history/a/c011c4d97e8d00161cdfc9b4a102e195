@@ -1,0 +1,48 @@
+package org.usfirst.frc.team1360.robot.IO;
+
+import edu.wpi.first.wpilibj.AnalogInput;
+import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+public class SensorInput {
+	private static SensorInput instance;
+	private RobotOutput robotOutput;
+	
+	private Encoder pivotEncoder;
+	private AnalogInput leftSide;
+	private AnalogInput rightSide;
+	
+	private SensorInput()
+	{
+		this.robotOutput = RobotOutput.getInstance();
+		this.pivotEncoder = new Encoder(0, 1);
+		this.rightSide = new AnalogInput(0);
+		this.leftSide = new AnalogInput(1);
+	}
+	
+	public static SensorInput getInstance()
+	{
+		if(instance == null)
+		{
+			SensorInput.instance = instance;
+		}
+		
+		return instance;
+	}
+	
+	public double getPivotEnvoder()
+	{
+		return pivotEncoder.get();
+	}
+	
+	public double getLeftSpeed()
+	{
+		return leftSide.getValue();
+	}
+	
+	public double getRightSpeed()
+	{
+		return rightSide.getValue();
+	}
+	
+}

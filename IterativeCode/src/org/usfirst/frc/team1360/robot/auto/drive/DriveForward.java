@@ -8,15 +8,18 @@ public class DriveForward extends AutonCommand {
 
 	private RobotOutput robotOutput;
 	
-	public DriveForward(long timeout) {
+	private double speed;
+	
+	public DriveForward(long timeout, double speed) {
 		super(RobotSubsystems.DRIVE, timeout);
 		
 		this.robotOutput = RobotOutput.getInstance();
+		this.speed = speed;
 	}
 
 	@Override
 	public boolean calculate() {
-		this.robotOutput.tankDrive(0.5, 0.5);
+		this.robotOutput.tankDrive(speed, speed);
 		return false;
 	}
 

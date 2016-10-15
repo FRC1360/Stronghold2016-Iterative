@@ -26,7 +26,7 @@ public class TeleopDrive implements TeleopComponent {
 	}
 	
 	public void calculate()
-	{
+	{		
 		double speed = this.humanInput.getDriverForward() - this.humanInput.getDriverBackward();
 		double turn = this.humanInput.getDriverTurn();
 		
