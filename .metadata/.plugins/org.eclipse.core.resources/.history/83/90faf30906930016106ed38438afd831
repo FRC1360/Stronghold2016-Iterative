@@ -12,5 +12,6 @@ public class LowBar implements AutonMode {
 	 ab.addCommand(new DriveForward(1));// sets drive to full speed
 	 ab.addCommand(new AutonWait(5000)); // waits 5 seconds
 	 ab.addCommand(new DriveForward(0));//sets drive to 0 
+      
 	}
 }
