@@ -8,7 +8,7 @@ import org.usfirst.frc.team1360.robot.util.pid.OrbitPID;
 
 public class PivotPID extends AutonCommand {
 
-	private SensorInput sensroInput;
+	private SensorInput sensorInput;
 	private RobotOutput robotOutput;
 	
 	private double setpoint;
@@ -17,7 +17,7 @@ public class PivotPID extends AutonCommand {
 	public PivotPID(double setpoint) {
 		super(RobotSubsystems.ARM);
 		
-		this.sensroInput = SensorInput.getInstance();
+		this.sensorInput = SensorInput.getInstance();
 		this.robotOutput = RobotOutput.getInstance();
 		this.pivotController = new OrbitPID(0.35, 0.001, 0.01, 0.5);
 		
@@ -26,6 +26,7 @@ public class PivotPID extends AutonCommand {
 
 	@Override
 	public boolean calculate() {
+		this.pivotController.SetInput(this.sensorInput.getPivotEncoderDegrees());
 		this.pivotController.SetSetpoint(setpoint);
 		this.pivotController.CalculateError();
 		this.robotOutput.pivot(this.pivotController.GetOutput());

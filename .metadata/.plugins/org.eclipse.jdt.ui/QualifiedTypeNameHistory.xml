@@ -11,4 +11,6 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.util.pid.PIDSpeedController"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.IO.SensorInput"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.util.pid.OrbitPID"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.auto.drive.DriveWait"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1360.robot.auto.AutonControl"/>
 </qualifiedTypeNameHistroy>

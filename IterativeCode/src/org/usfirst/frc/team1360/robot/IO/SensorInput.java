@@ -25,6 +25,7 @@ public class SensorInput {
 		this.robotOutput = RobotOutput.getInstance();
 		this.pivotEncoder = new Encoder(4, 5);
 		this.leftSide = new Encoder(0, 1, false, EncodingType.k1X);
+		
 		this.leftSide.setDistancePerPulse(1);
 		this.leftSide.setMaxPeriod(1.0);
 		this.leftSide.setMinRate(1.0);
