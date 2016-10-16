@@ -20,8 +20,8 @@ public class TeleopShoot implements TeleopComponent{
 		this.robotOutput = robotOutput.getInstance();
 		this.humanInput = humanInput.getInstance();	
 		this.sensorInput = sensorInput.getInstance();
-		this.LSide = new OrbitBangBang(1, 0);
-		this.RSide = new OrbitBangBang(1, 0);
+		this.LSide = new OrbitBangBang(1, 1);
+		this.RSide = new OrbitBangBang(1, 1);
 	}
 	
 	public static TeleopShoot getInstance()
@@ -49,23 +49,24 @@ public class TeleopShoot implements TeleopComponent{
 		else if (humanInput.getOperatorBatterShot())
 		{
 			//this.robotOutput.setShooter(0.5, 0.5);
-			this.LSide.setTarget(2000);
-			this.LSide.setHighLow(1, 0);
-			this.RSide.setTarget(2000);
-			this.RSide.setHighLow(1, 0);
+			this.LSide.setTarget(1.0);
+			this.LSide.setHighLow(1, 1);
+			this.RSide.setTarget(1.0);
+			this.RSide.setHighLow(1, 1);
 			
-			this.robotOutput.setShooter(LSide.calculate(this.sensorInput.getLeftSpeed()), LSide.calculate(this.sensorInput.getRightSpeed()));
+			this.robotOutput.setShooter(LSide.calculate(this.sensorInput.getLeftSpeed()), RSide.calculate(this.sensorInput.getRightSpeed()));
+			//this.robotOutput.setShooter(1, 1);
 			this.robotOutput.intake(LSpeed);
 		} 
 		else if (humanInput.getOperatorOuterworksShot())
 		{
 			//this.robotOutput.setShooter(1, 1);
-			this.LSide.setTarget(2000);
+			this.LSide.setTarget(0.8);
 			this.LSide.setHighLow(1, 0);
-			this.RSide.setTarget(2000);
+			this.RSide.setTarget(0.8);
 			this.RSide.setHighLow(1, 0);
 			
-			this.robotOutput.setShooter(LSide.calculate(this.sensorInput.getLeftSpeed()), LSide.calculate(this.sensorInput.getRightSpeed()));
+			this.robotOutput.setShooter(LSide.calculate(this.sensorInput.getLeftSpeed()), RSide.calculate(this.sensorInput.getRightSpeed()));
 			this.robotOutput.intake(LSpeed);
 		}
 		else if(Math.abs(LSpeed) > 0.3 || Math.abs(RSpeed) > 0.3)
