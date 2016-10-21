@@ -79,6 +79,16 @@ public class HumanInput {
 		return this.operator.getButtonA();
 	}
 	
+	/*public boolean getOperatorOuterworksShot()
+	{
+		return this.operator.getButtonB();
+	}
+	
+	public boolean getOperatorBatterShot()
+	{
+		return this.operator.getButtonX();
+	}*/
+	
 	public boolean getOperatorShoot()
 	{
 		return this.operator.getButtonY();
@@ -87,11 +97,6 @@ public class HumanInput {
 	public boolean getOperatorUpPosition()
 	{
 		return this.operator.getButtonX();
-	}
-	
-	public boolean getOperatorOutakeWithButtons()
-	{
-		return this.operator.getButtonB();
 	}
 	
 	//Auto

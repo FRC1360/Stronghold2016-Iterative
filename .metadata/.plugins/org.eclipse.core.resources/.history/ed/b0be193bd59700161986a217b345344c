@@ -89,7 +89,7 @@ public class HumanInput {
 		return this.operator.getButtonX();
 	}
 	
-	public boolean getOperatorOutakeWithButtons()
+	public boolean getOperatorOutake()
 	{
 		return this.operator.getButtonB();
 	}

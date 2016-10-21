@@ -79,19 +79,19 @@ public class HumanInput {
 		return this.operator.getButtonA();
 	}
 	
-	public boolean getOperatorShoot()
+	public boolean getOperatorOuterworksShot()
 	{
-		return this.operator.getButtonY();
+		return this.operator.getButtonB();
 	}
 	
-	public boolean getOperatorUpPosition()
+	public boolean getOperatorBatterShot()
 	{
 		return this.operator.getButtonX();
 	}
 	
-	public boolean getOperatorOutakeWithButtons()
+	public boolean getOperatorResetEncoder()
 	{
-		return this.operator.getButtonB();
+		return this.operator.getButtonY();
 	}
 	
 	//Auto
