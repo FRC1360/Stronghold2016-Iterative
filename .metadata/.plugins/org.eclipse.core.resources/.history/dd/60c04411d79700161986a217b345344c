@@ -69,12 +69,6 @@ public class TeleopPivot implements TeleopComponent {
 			this.robotOutput.pivot(this.pivotController.GetOutput());
 
 		}
-		else if(humanInput.getOperatorOutakeWithButtons() && sensorInput.getRightSpeed() > 0.85 && sensorInput.getLeftSpeed() > 0.85)
-		{
-			this.pivotController.SetSetpoint(0);
-			this.pivotController.CalculateError();
-			this.robotOutput.pivot(this.pivotController.GetOutput());
-		}
 		else if (humanInput.getOperatorUpPosition())
 		{
 			this.pivotController.SetSetpoint(145);
