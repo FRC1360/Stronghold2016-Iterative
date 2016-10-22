@@ -6874,3 +6874,45 @@ java.net.UnknownHostException: services.gradle.org
 
 !ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:01:52.809
 !MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:25:37.096
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:25:37.101
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:28:53.232
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:28:53.238
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:33:55.413
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:33:55.421
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:35:20.010
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:35:20.015
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:37:20.181
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:37:20.186
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:44:29.659
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:44:29.664
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:47:20.957
+!MESSAGE Running ant file: C:\Users\Michael Geddes\Documents\GitHub\Stronghold2016-Iterative\IterativeCode\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-10-21 21:47:20.963
+!MESSAGE Targets: deploy, Mode: run
