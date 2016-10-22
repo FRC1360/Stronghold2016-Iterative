@@ -43,7 +43,7 @@ public class TeleopShoot implements TeleopComponent{
 		if(humanInput.getOperatorIntakeHeight())
 		{
 			this.robotOutput.setShooter(LSpeed, RSpeed);			
-			if(LSpeed > 0)
+			if(LSpeed < 0)
 			{
 				if(this.sensorInput.getLeftSpeed() > 0.5 && this.sensorInput.getRightSpeed() > 0.5)
 				{
@@ -56,7 +56,7 @@ public class TeleopShoot implements TeleopComponent{
 			}
 			else
 			{
-				if(this.sensorInput.getLeftSpeed() > 0.5 && this.sensorInput.getRightSpeed() > 0.5)
+				if(this.sensorInput.getLeftSpeed() < -0.5 && this.sensorInput.getRightSpeed() < 0.5)
 				{
 					this.robotOutput.intake(LSpeed);
 				}
