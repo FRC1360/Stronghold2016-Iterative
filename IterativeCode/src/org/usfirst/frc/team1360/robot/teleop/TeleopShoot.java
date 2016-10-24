@@ -3,6 +3,7 @@ package org.usfirst.frc.team1360.robot.teleop;
 import org.usfirst.frc.team1360.robot.IO.HumanInput;
 import org.usfirst.frc.team1360.robot.IO.RobotOutput;
 import org.usfirst.frc.team1360.robot.IO.SensorInput;
+import org.usfirst.frc.team1360.robot.util.Debugger;
 import org.usfirst.frc.team1360.robot.util.OrbitBangBang;
 
 public class TeleopShoot implements TeleopComponent{
@@ -14,6 +15,10 @@ public class TeleopShoot implements TeleopComponent{
 	
 	private OrbitBangBang LSide;
 	private OrbitBangBang RSide;
+	
+	private long shooterTime = 500;
+	private boolean autoShoot = false;
+	private boolean autoStop = false;
 	
 	private TeleopShoot()
 	{
@@ -70,6 +75,17 @@ public class TeleopShoot implements TeleopComponent{
 		else if (humanInput.getOperatorShoot())
 		{
 			//this.robotOutput.setShooter(0.5, 0.5);
+			/*this.LSide.setTarget(0.9);
+			this.LSide.setHighLow(1.0, 0.8);
+			this.RSide.setTarget(0.9);
+			this.RSide.setHighLow(1, 0.8);
+			
+			this.robotOutput.setShooter(LSide.calculate(this.sensorInput.getLeftSpeed()), RSide.calculate(this.sensorInput.getRightSpeed()));
+			//this.robotOutput.setShooter(1, 1);
+			this.robotOutput.intake(LSpeed);*/
+		} 
+		else if (humanInput.getOperatorLowgoal())
+		{
 			this.LSide.setTarget(0.9);
 			this.LSide.setHighLow(1.0, 0.8);
 			this.RSide.setTarget(0.9);
@@ -78,20 +94,56 @@ public class TeleopShoot implements TeleopComponent{
 			this.robotOutput.setShooter(LSide.calculate(this.sensorInput.getLeftSpeed()), RSide.calculate(this.sensorInput.getRightSpeed()));
 			//this.robotOutput.setShooter(1, 1);
 			this.robotOutput.intake(LSpeed);
-		} 
-		else if(Math.abs(LSpeed) > 0.3 || Math.abs(RSpeed) > 0.3)
+		}
+		else if(Math.abs(LSpeed) > 0.3 || Math.abs(RSpeed) > 0.3 && this.autoShoot == false)
 		{
 			this.robotOutput.setShooter(LSpeed, RSpeed);
 			this.robotOutput.intake(LSpeed);
 		}
-		else 
+		else
 		{
-			this.robotOutput.setShooter(0, 0);
-			this.robotOutput.intake(0);
+			if(this.autoShoot == false)
+			{
+				this.robotOutput.setShooter(0, 0);
+				this.robotOutput.intake(0);
+			}
 		}
 		
-
+		if(this.humanInput.getOperatorRevUntilShoot())
+		{
+				this.LSide.setTarget(0.9);
+				this.LSide.setHighLow(1.0, 0.8);
+				this.RSide.setTarget(0.9);
+				this.RSide.setHighLow(1, 0.8);
+				
+				this.robotOutput.setShooter(LSide.calculate(this.sensorInput.getLeftSpeed()), RSide.calculate(this.sensorInput.getRightSpeed()));
+				this.shooterTime = 100;
+				this.autoShoot = true;
+			
+		} 
+		else if (this.autoShoot == true && Math.abs(LSpeed) > 0.5)
+		{
+			this.autoStop = true;
+		}
 		
+		if(this.autoStop)
+		{
+			shooterTime -= 1;
+			
+			if(this.shooterTime <= 0)
+			{
+				this.robotOutput.intake(0);
+				this.robotOutput.setShooter(0, 0);
+				this.autoShoot = false;
+				this.autoStop = false;
+			}
+			else 
+			{
+				this.robotOutput.intake(1);
+			}
+		}
+		
+		Debugger.println(shooterTime);
 	}
 
 	@Override

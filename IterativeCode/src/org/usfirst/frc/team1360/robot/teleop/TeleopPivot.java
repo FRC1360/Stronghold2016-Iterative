@@ -52,7 +52,7 @@ public class TeleopPivot implements TeleopComponent {
 		
 		if(Math.abs(speed) > 0.2)
 		{
-			robotOutput.pivot(speed * 0.45);
+			robotOutput.pivot(speed);
 			this.pivotController.SetSetpoint(-1);
 			this.pivotController.CalculateError();
 		}
@@ -64,7 +64,7 @@ public class TeleopPivot implements TeleopComponent {
 		} 
 		else if (humanInput.getOperatorShoot())
 		{
-			this.pivotController.SetSetpoint(115);
+			this.pivotController.SetSetpoint(125);
 			this.pivotController.CalculateError();
 			this.robotOutput.pivot(this.pivotController.GetOutput());
 
@@ -76,6 +76,18 @@ public class TeleopPivot implements TeleopComponent {
 			this.robotOutput.pivot(this.pivotController.GetOutput());
 
 		} 
+		else if (humanInput.getOperatorLowgoal())
+		{
+			this.pivotController.SetSetpoint(20);
+			this.pivotController.CalculateError();
+			this.robotOutput.pivot(this.pivotController.GetOutput());
+		}
+		else if (humanInput.getOperatorRevUntilShoot())
+		{
+			this.pivotController.SetSetpoint(132);
+			this.pivotController.CalculateError();
+			this.robotOutput.pivot(this.pivotController.GetOutput());
+		}
 		else
 		{
 			robotOutput.pivot(0);

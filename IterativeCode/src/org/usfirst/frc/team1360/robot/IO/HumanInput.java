@@ -60,18 +60,19 @@ public class HumanInput {
 	//Operator
 	public double getOperatorInatke()
 	{
-		return this.operator.getLeftTrigger();
+		return this.operator.getRightTrigger();
 	}
 	
 	public double getOperatorOutake()
 	{
-		return this.operator.getRightTrigger();
+		return this.operator.getLeftTrigger();
 	}
 	
 	public double getOperatorPivot()
 	{
 		return -this.operator.getLeftYAxis();
 	}
+	
 	
 	//Operator Buttons for Shooting
 	public boolean getOperatorIntakeHeight()
@@ -89,9 +90,14 @@ public class HumanInput {
 		return this.operator.getButtonX();
 	}
 	
-	public boolean getOperatorOutakeWithButtons()
+	public boolean getOperatorLowgoal()
 	{
 		return this.operator.getButtonB();
+	}
+	
+	public boolean getOperatorRevUntilShoot()
+	{
+		return this.operator.getButtonRB();
 	}
 	
 	//Auto
@@ -106,9 +112,7 @@ public class HumanInput {
     public double getAutonSelectStick() {
         return this.driver.getLeftYAxis();
     }
-    
-    
-    
+
     public boolean getAutonStepIncrease() {
     	// only returns true on rising edge
     	boolean result = this.driver.getButtonRB() && !this.autonIncreaseStepWasPressed;
