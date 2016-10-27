@@ -20,7 +20,7 @@ public class ActivateSolenoid extends AutonCommand {
 	@Override
 	public boolean calculate() {
 		this.robotOutput.actuateDriveTrain(state);
-		return true;
+		return false;
 	}
 
 	@Override

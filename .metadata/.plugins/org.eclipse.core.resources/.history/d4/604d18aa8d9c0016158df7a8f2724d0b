@@ -9,9 +9,6 @@ import org.usfirst.frc.team1360.robot.IO.RobotOutput;
 import org.usfirst.frc.team1360.robot.auto.mode.AutonBuilder;
 import org.usfirst.frc.team1360.robot.auto.mode.AutonMode;
 import org.usfirst.frc.team1360.robot.auto.mode.DefaultMode;
-import org.usfirst.frc.team1360.robot.auto.mode.step1.CDF;
-import org.usfirst.frc.team1360.robot.auto.mode.step1.DriveWithActuate;
-import org.usfirst.frc.team1360.robot.auto.mode.step1.JustDrive;
 import org.usfirst.frc.team1360.robot.auto.mode.step1.LowBar;
 import org.usfirst.frc.team1360.robot.util.Debugger;
 
@@ -60,9 +57,6 @@ public class AutonControl {
         ArrayList<AutonMode> step1 = this.autonSteps.get(0);
         step1.add(new DefaultMode());      //0
         step1.add(new LowBar());
-        step1.add(new CDF());
-        step1.add(new JustDrive());
-        step1.add(new DriveWithActuate());
         
         
         // --- STEP 2 SUBMODES
