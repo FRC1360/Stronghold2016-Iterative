@@ -1,0 +1,30 @@
+package org.usfirst.frc.team1360.robot.auto.drive;
+
+import org.usfirst.frc.team1360.robot.IO.RobotOutput;
+import org.usfirst.frc.team1360.robot.auto.AutonCommand;
+import org.usfirst.frc.team1360.robot.auto.RobotSubsystems;
+
+public class ActivateSolenoid extends AutonCommand {
+
+	private RobotOutput robotOutput;
+	private boolean state;
+	
+	public ActivateSolenoid(RobotSubsystems type) {
+		super(DriveSubsystems.DRIVE);
+		
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean calculate() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void override() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
