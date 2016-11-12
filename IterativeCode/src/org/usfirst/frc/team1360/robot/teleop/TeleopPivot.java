@@ -82,9 +82,9 @@ public class TeleopPivot implements TeleopComponent {
 			this.pivotController.CalculateError();
 			this.robotOutput.pivot(this.pivotController.GetOutput());
 		}
-		else if (humanInput.getOperatorRevUntilShoot())
+		else if (humanInput.getOperatorShootPosition())
 		{
-			this.pivotController.SetSetpoint(132);
+			this.pivotController.SetSetpoint(125);
 			this.pivotController.CalculateError();
 			this.robotOutput.pivot(this.pivotController.GetOutput());
 		}

@@ -100,6 +100,11 @@ public class HumanInput {
 		return this.operator.getButtonRB();
 	}
 	
+	public boolean getOperatorShootPosition()
+	{
+		return this.operator.getButtonLB();
+	}
+	
 	//Auto
     public boolean getAutonSetModeButton() {
         return this.driver.getButtonA();

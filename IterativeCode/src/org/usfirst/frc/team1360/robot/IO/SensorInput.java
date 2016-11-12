@@ -72,6 +72,7 @@ public class SensorInput {
 	public double getLeftSpeed()
 	{
 		return leftSide.getRate() / HALL_EFFECT_SENSOR_MAX_RATE;
+		//return leftSide.getRate();
 	}
 	
 	public double getRightSpeed()

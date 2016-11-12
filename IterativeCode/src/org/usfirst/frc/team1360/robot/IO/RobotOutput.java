@@ -87,6 +87,9 @@ public class RobotOutput {
 	{
 		shootMotorL.set(-lSpeed);
 		shootMotorR.set(rSpeed);
+		//shootMotorL.set(-1.0);
+		//shootMotorR.set(1.0);
+		//System.out.printf("%f", SensorInput.getInstance().getLeftSpeed());
 	}
 	
 	public void pivot(double speed)

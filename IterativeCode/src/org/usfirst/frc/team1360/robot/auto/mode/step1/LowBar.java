@@ -15,7 +15,7 @@ public class LowBar implements AutonMode {
 	public void addToMode(AutonBuilder ab) {
 	 ab.addCommand(new PivotPID(0));
 	 ab.addCommand(new AutonWait(500));
-	 ab.addCommand(new DriveForward(2000, -0.5));// sets drive to full speed
+	 ab.addCommand(new DriveForward(2000, 0.5));// sets drive to full speed
 	 ab.addCommand(new DriveWait());
 	 ab.addCommand(new AutonWait(2000));
 	 /*ab.addCommand(new AutonOverride(RobotSubsystems.ARM));
