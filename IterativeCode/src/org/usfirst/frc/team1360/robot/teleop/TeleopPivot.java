@@ -39,7 +39,8 @@ public class TeleopPivot implements TeleopComponent { // Component that controls
 	}
 
 	@Override
-	public void calculate() { // Runs PID and updates motors from controller, adjusting target if possible
+	public void calculate() // Runs PID and updates motors from controller, adjusting target if possible
+	{
 		this.pivotController.SetP(SmartDashboard.getNumber("Pivot P: "));
 		this.pivotController.SetI(SmartDashboard.getNumber("Pivot I: "));
 		this.pivotController.SetD(SmartDashboard.getNumber("Pivot D: "));
@@ -96,7 +97,8 @@ public class TeleopPivot implements TeleopComponent { // Component that controls
 	}
 
 	@Override
-	public void disable() { // Ensures that motors are turned off
+	public void disable() // Ensures that motors are turned off
+	{
 		this.robotOutput.pivot(0);
 	}
 
