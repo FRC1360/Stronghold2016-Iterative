@@ -1361,3 +1361,7 @@ java.net.UnknownHostException: services.gradle.org
 2016-11-02 19:34:12,102 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2016-11-09 20:05:34,371 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2016-11-09 20:05:38,434 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2016-12-30 09:15:49,119 [Thread-5] ERROR org.eclipse.jgit.util.FS - 2016-12-30 09:15:47.952 xcodebuild[3145:236235] [MT] PluginLoading: Required plug-in compatibility UUID DA4FDFD8-C509-4D8B-8B55-84A7B66AE701 for plug-in at path '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Unity4XC.xcplugin' not present in DVTPlugInCompatibilityUUIDs
+2016-12-30 09:15:47.957 xcodebuild[3145:236235] Failed to load plugin at: /Users/michaelgeddes/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Unity4XC.xcplugin, skipping.  Reason for failure: *** -[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]
+
+2016-12-30 09:15:52,420 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
